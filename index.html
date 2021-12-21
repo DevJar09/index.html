@@ -6,10 +6,9 @@
     <body>
     <br>
     <br>
-    <br>
     <form>
         <center>
-            <table border=1 width=285 bordercolor="#3333">
+            <table border=1 width=285 height=200 bordercolor="#3333">
                 <tr>
                     <th colspan=2>Payroll System</th>
                 </tr>
@@ -51,8 +50,10 @@
     }
     input{
     background-color: #f9f9f9;
+    border: none;
     }
     .btn {
+    height: 20px;
     color: #e0e0e0;
     border: none;
     background-color: #333;
@@ -67,7 +68,7 @@
     }
     .credits{
     font-size: 10px;
-    color: black;
+    color: #3333;
     border: none;
     outline: none;
     background: none;
@@ -100,16 +101,18 @@
     }
     else {
     var salary = rate * hours;
-    var tp = salary - (salary * 0.1);
-    var tax = salary * 0.1;
+    var tp = salary - (salary * 0.11+100);
+    var sss = salary * 0.11;
     document.write("Employee Name : " + name);
     document.write("<br>Address : " + address);
     document.write("<br>Contact Number : " + tel);
-    document.write("<br>Rate Per Hour : " + rate);
     document.write("<br>No. of Hours Worked : " + hours);
+    document.write("<br>Rate Per Hour : " + rate);
     document.write("<br>Salary : " + salary);
-    document.write("<br>Tax : " + tax);
-    document.write("<br>Take Home Pay : " + tp);
+    document.write("<br><br>     Total Deductions : ");
+    document.write("<br>SSS : " + sss);
+    document.write("<br>Pag-Ibig : 100 ");
+    document.write("<br><br>𝙏𝙖𝙠𝙚 𝙃𝙤𝙢𝙚 𝙋𝙖𝙮 : " + tp);
     }
     }
     function redirect3(){
